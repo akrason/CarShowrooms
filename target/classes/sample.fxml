@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="700.0" prefWidth="900.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+      <RowConstraints />
+    </rowConstraints>
+    <VBox GridPane.rowIndex="2">
+        <Pane prefHeight="200.0" prefWidth="1281.0">
+            <ComboBox fx:id="combobox" layoutX="6.0" layoutY="55.0" onAction="#comboChanged" prefHeight="43.0" prefWidth="222.0" promptText="Wybierz salon" />
+            <Label fx:id="nazwal" layoutX="18.0" layoutY="117.0" prefHeight="26.0" prefWidth="221.0" text="Wybrano:">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Label>
+            <TextField fx:id="search" layoutX="511.0" layoutY="118.0" onAction="#textBoxChanged" />
+            <Label layoutX="511.0" layoutY="98.0" text="Wyszukaj pojazd">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Label>
+            <ImageView fitHeight="140.0" fitWidth="232.0" layoutX="660.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@5435.jpg" />
+               <!-- 'https://pl.freepik.com/wektory/samochod'>Samochód plik wektorowy utworzone przez pch.vector - pl.freepik.com/> -->
+            </ImageView>
+        </Pane>
+        <Pane prefHeight="553.0" prefWidth="880.0">
+            <TableView fx:id="CarsList" layoutX="175.0" layoutY="14.0" prefHeight="481.0" prefWidth="572.0" />
+            <Button fx:id="srtByName" layoutX="754.0" layoutY="14.0" mnemonicParsing="false" onAction="#sortByName" prefHeight="36.0" prefWidth="101.0" text="Sortuj A-Z" />
+            <Button layoutX="754.0" layoutY="50.0" mnemonicParsing="false" onAction="#sortByYear" prefHeight="36.0" prefWidth="101.0" text="Sortuj: Rok" />
+            <Button layoutX="754.0" layoutY="86.0" mnemonicParsing="false" onAction="#sortByPrice" prefHeight="36.0" prefWidth="101.0" text="Sortuj: Cena" />
+            <Button layoutX="18.0" layoutY="275.0" mnemonicParsing="false" onAction="#reserveCar" prefHeight="36.0" prefWidth="136.0" text="Dodaj do ulubionych" />
+            <Button layoutX="17.0" layoutY="327.0" mnemonicParsing="false" onAction="#buyCar" prefHeight="36.0" prefWidth="139.0" text="Kup teraz" />
+            <Button layoutX="18.0" layoutY="419.0" mnemonicParsing="false" onAction="#unreserveCar" prefHeight="36.0" prefWidth="141.0" text="Usuń z ulubionych" />
+         <Button layoutX="755.0" layoutY="386.0" mnemonicParsing="false" onAction="#favourite" prefHeight="32.0" prefWidth="110.0" text="Ulubione" />
+         <Button layoutX="758.0" layoutY="345.0" mnemonicParsing="false" onAction="#reviews" prefHeight="25.0" prefWidth="101.0" text="Oceny" />
+        </Pane>
+    </VBox>
+</GridPane>

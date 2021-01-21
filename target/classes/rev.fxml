@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerReview">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="236.0" minHeight="10.0" prefHeight="114.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="343.0" minHeight="10.0" prefHeight="343.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane prefHeight="311.0" prefWidth="674.0" GridPane.rowIndex="1">
+         <children>
+            <TableView fx:id="reviews" layoutX="34.0" layoutY="-2.0" prefHeight="279.0" prefWidth="475.0" />
+            <Button layoutX="543.0" layoutY="252.0" mnemonicParsing="false" onAction="#addReview" text="Dodaj recenzję" />
+            <TextField fx:id="rate" layoutX="516.0" layoutY="220.0" />
+            <TextArea fx:id="comment" layoutX="517.0" layoutY="39.0" prefHeight="161.0" prefWidth="149.0" />
+            <Label layoutX="517.0" layoutY="200.0" text="Ocena" />
+            <Label layoutX="520.0" layoutY="16.0" text="Komentarz" />
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ComboBox fx:id="combobox" layoutX="32.0" layoutY="32.0" onAction="#comboChanged" prefWidth="150.0" />
+            <ImageView fitHeight="105.0" fitWidth="174.0" layoutX="482.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@5435.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="l_ocen" layoutX="242.0" layoutY="36.0" text="Liczba ocen:" />
+            <Label fx:id="srednia_ocen" layoutX="242.0" layoutY="60.0" text="Średnia ocen" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
